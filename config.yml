@@ -10,6 +10,9 @@ executors:
   doc_builder:
     docker:
       - image: $AWS_QA_ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/otg/doc-builder:latest
+        aws_auth:
+          aws_access_key_id: $AWS_QA_ACCESS_KEY_ID
+          aws_secret_access_key: $AWS_QA_SECRET_KEY
 
 commands:
   setup_aws_credentials:
@@ -18,9 +21,6 @@ commands:
       - run:
           name: Write credentials to ~/.aws/credentials
           command: |
-            unset AWS_ACCESS_KEY_ID
-            unset AWS_SECRET_ACCESS_KEY
-            unset AWS_DEFAULT_REGION
             mkdir ~/.aws
             echo -e "[default]\naws_access_key_id=$AWS_PROD_ACCESS_KEY_ID\naws_secret_access_key=$AWS_PROD_SECRET_KEY\n" > ~/.aws/credentials
   write_env_variables:
