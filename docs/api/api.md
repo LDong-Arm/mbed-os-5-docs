@@ -6,6 +6,7 @@
 The Mbed OS RTOS capabilities include managing objects such as threads, synchronization objects and timers. It also provides interfaces for attaching an application-specific idle hook function, reads the OS tick count and implements functionality to report RTOS errors.
 
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
@@ -33,6 +34,7 @@ The Mbed OS RTOS capabilities include managing objects such as threads, synchron
 
 Input/Output APIs include analog and digital inputs and outputs on development boards, as well as digital interfaces, which allow your board to interface with a computer or external devices.
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
@@ -82,9 +84,13 @@ Input/Output APIs include analog and digital inputs and outputs on development b
 
 The data storage APIs include file system APIs, for file system operations, and block devices, which provide the raw storage for the file systems.
 
+Some of the RTOS APIs are also compatible with Mbed OS baremetal profile. The Mbed OS bare metal profile](mbed-os-bare-metal.html) is a compact profile of Mbed OS without an RTOS.
+
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
+<<<<<<< Updated upstream
 <td><a href="data-apis.html">KVStore</a></td>
 <td><a href="static-global-api.html">Static Global API</a></td>
 <td><a href="filesystem.html">FileSystem</a></td>
@@ -97,8 +103,26 @@ The data storage APIs include file system APIs, for file system operations, and 
 <td><a href="blockdevice.html">BlockDevice</a></td>
 <td><a href="heapblockdevice.html">HeapBlockDevice</a></td>
 <td><a href="mbrblockdevice.html">MBRBlockDevice</a></td>
+=======
+<td><a href="semaphore.html">Semaphore</a></td>
+<td><a href="userallocatedevent.html">UserAllocatedEvent</a></td>
+<td><a href="eventflags.html">EventFlags</a></td>
+<td><a href="kernel-interface-functions.html">Kernel interface functions</a></td>
 </tr>
 <tr>
+<td><a href="thisthread.html">ThisThread</a></td>
+<td><a href="event.html">Event</a></td>
+<td><a href="eventqueue.html">EventQueue</a></td>
+>>>>>>> Stashed changes
+</tr>
+</tbody>
+</table>
+
+### RTOS supported APIs
+<table>
+<tbody>
+<tr>
+<<<<<<< Updated upstream
 <td><a href="chainingblockdevice.html">ChainingBlockDevice</a></td>
 <td><a href="slicingblockdevice.html">SlicingBlockDevice</a></td>
 <td><a href="profilingblockdevice.html">ProfilingBlockDevice</a></td>
@@ -115,6 +139,16 @@ The data storage APIs include file system APIs, for file system operations, and 
 <tr>
 <td><a href="psa-internal-storage.html">PSA internal storage</a></td>
 <td><a href="psa-protected-storage.html">PSA protected storage</a></td>
+=======
+<td><a href="mail.html">Mail</a></td>
+<td><a href="conditionvariable.html">ConditionVariable</a></td>
+<td><a href="thread.html">Thread</a></td>
+</tr>
+<tr>
+<td><a href="queue.html">Queue</a></td>
+<td><a href="memorypool.html">MemoryPool</a></td>
+<td><a href="mutex.html">Mutex</a></td>
+>>>>>>> Stashed changes
 </tr>
 </tbody>
 </table>
@@ -126,9 +160,11 @@ The data storage APIs include file system APIs, for file system operations, and 
 
 Network interfaces are the application level APIs where users choose the driver, connectivity method and IP stack. These include ethernet, Wi-Fi, cellular and mesh interfaces.
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
+<<<<<<< Updated upstream
 <td><a href="socket.html">Socket</a></td>
 <td><a href="ethernet.html">Ethernet</a></td>
 <td><a href="wi-fi.html">Wi-Fi</a></td>
@@ -140,14 +176,43 @@ Network interfaces are the application level APIs where users choose the driver,
 <td><a href="messageparser.html">MessageParser</a></td>
 <td><a href="simplemessageparser.html">SimpleMessageParser</a></td>
 <td><a href="messagebuilder.html">MessageBuilder</a></td>
+=======
+<td><a href="usbserial.html">USBSerial</a></td>
+<td><a href="usbhid.html">USBHID</a></td>
+<td><a href="usbmidi.html">USBMIDI</a></td>
+<td><a href="usbkeyboard.html">USBKeyboard</a></td>
+<td><a href="usbaudio.html">USBAudio</a></td>
+</tr>
+<tr>
+<td><a href="usbcdc.html">USBCDC</a></td>
+<td><a href="usbmsd.html">USBMSD</a></td>
+<td><a href="usbmouse.html">USBMouse</a></td>
+<td><a href="usbmousekeyboard.html">USBMouseKeyboard</a></td>
+>>>>>>> Stashed changes
 </tr>
 </tbody>
 </table>
 
+<<<<<<< Updated upstream
 ### Socket
 
 Socket APIs include the application programming interface for IP networking. In Mbed OS, this API supports both TCP and UDP protocols.
+=======
+### RTOS supported APIs
+<tbody>
+<tr>
+<td><a href="usbcdc-ecm.html">USBCDC_ECM</a></td>
+</tr>
+</tbody>
+</table>
 
+## Network socket APIs
+
+[Network socket APIs](network-socket.html) include the application programming interface for IP networking. In Mbed OS, this API supports both TCP and UDP protocols.
+This APIs are only supported in baremetal.
+>>>>>>> Stashed changes
+
+### RTOS supported APIs
 <table>
 <tbody>
 <tr>
@@ -162,6 +227,7 @@ Socket APIs include the application programming interface for IP networking. In 
 
 ### Secure socket
 
+### RTOS supported APIs
 <table>
 <tbody>
 <tr>
@@ -185,6 +251,7 @@ Socket APIs include the application programming interface for IP networking. In 
 
 Bluetooth low energy (BLE) is a low power wireless technology standard for building personal area networks. Typical applications of BLE are health care, fitness trackers, beacons, smart home, security, entertainment, proximity sensors, industrial and automotive.
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
@@ -205,6 +272,7 @@ Bluetooth low energy (BLE) is a low power wireless technology standard for build
 
 You can use Near-Field Communication (NFC), a short-range radio technology, for use cases such as contactless payments, access control and device pairing.
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
@@ -231,6 +299,7 @@ Arm Mbed OS provides a native network stack for LoRaWAN. LoRaWAN is a technology
 
 The Mbed OS classes providing USB peripheral functionality, also known as USB components, inherit from USBDevice and provide specific USB peripherial functionality.
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
@@ -254,6 +323,7 @@ The Mbed OS classes providing USB peripheral functionality, also known as USB co
 
 With [Arm Mbed TLS](security.html), a comprehensive SSL/TLS solution, you can include cryptographic and SSL/TLS capabilities in your code.
 
+### RTOS supported APIs
 <table>
 <tbody>
 <tr>
@@ -285,13 +355,21 @@ With [Arm Mbed TLS](security.html), a comprehensive SSL/TLS solution, you can in
 
 ## Memory
 
+### RTOS and Baremetal profile supported APIs
 <table>
 <tbody>
 <tr>
+<<<<<<< Updated upstream
 <td><a href="mbed-statistics.html">mbed_stats (Mbed statistics)</a></td>
 <td><a href="mpu-management.html">mpug_mgmt (MPU management)</a></td>
 <td><a href="memory-tracing.html">mbed_mem_trace (Memory tracing)</a></td>
 <td><a href="memorypool.html">MemoryPool</a></td>
+=======
+<td><a href="kvstore.html">KVStore</a></td>
+<td><a href="littlefilesystem.html">LittleFileSystem</a></td>
+<td><a href="chainingblockdevice.html">ChainingBlockDevice</a></td>
+<td><a href="../apis/dataflashblockdevice.html">DataFlashBlockDevice</a></td>
+>>>>>>> Stashed changes
 </tr>
 </tbody>
 </table>
@@ -301,11 +379,18 @@ With [Arm Mbed TLS](security.html), a comprehensive SSL/TLS solution, you can in
 <table>
 <tbody>
 <tr>
+<<<<<<< Updated upstream
 <td><a href="util-apis.html">Callback</a></td>
 <td><a href="criticalsectionlock.html">CriticalSectionLock</a></td>
 <td><a href="time.html">Time</a></td>
 <td><a href="rtc.html">RTC</a></td>
 <td><a href="debug.html">Debug</a></td>
+=======
+<td><a href="static-global-api.html">Static Global API</a></td>
+<td><a href="fatfilesystem.html">FATFileSystem</a></td>
+<td><a href="slicingblockdevice.html">SlicingBlockDevice</a></td>
+<td><a href="flashiapblockdevice.html">FlashIAPBlockDevice</a></td>
+>>>>>>> Stashed changes
 </tr>
 <tr>
 <td><a href="error-handling.html">Error handling</a></td>
@@ -327,3 +412,21 @@ With [Arm Mbed TLS](security.html), a comprehensive SSL/TLS solution, you can in
 </tr>
 </tbody>
 </table>
+<<<<<<< Updated upstream
+=======
+
+### RTOS supported APIs
+<table>
+<tbody>
+<tr>
+<td><a href="../apis/psa-internal-storage.html">PSA internal storage</a></td>
+<td><a href="../apis/psa-protected-storage.html">PSA protected storage</a></td>
+</tr>
+</tbody>
+</table>
+
+## Note
+1. The components webpage is linked here most probably describe with examples based on RTOS.
+2. The components APIs which only listed out "RTOS supported APIs" then those particular components currently supported only in RTOS.
+-->
+>>>>>>> Stashed changes
